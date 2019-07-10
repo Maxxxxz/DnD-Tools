@@ -1,5 +1,14 @@
-# PythonWindowTemplate
-A tkinter window template for Python.
-This is mainly for me so that I don't have to go through the same process every time I want to create a GUI for a project.
+# DnD Character Generator
 
-I intend on updating this with other bundled things as I think of more that I may need frequently.
+This program will generate a json file containing the information for a Dungeons and Dragons character/NPC.
+The file can be loaded into the editor
+
+# Todo
+  * Everything
+  * Create 'Character' class
+    * Implement functions that allow class to be simply written to json format and read from
+    * Gather all required elements for a Character to have
+  * Basic UI elements that allow generation of the class
+  * Write/Read to/from json
+  * Reasonable generators with options (i.e. reroll 1s, no random class/name)
+  * Coherent story generator
