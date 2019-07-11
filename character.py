@@ -9,10 +9,17 @@ class Character():
     #   start wealth
     #   start inventory
     #   features
+    #   saving throws
 
     #based on level:
     #
     #   proficiency bonus
+
+    #based on stats
+    #
+    #   modifiers
+    #   max hp
+    #
 
     #based on race:
     #
@@ -22,6 +29,13 @@ class Character():
     #need to generate:
     #
     #   Name
+    #   Gender
+    #   Age
+    #   Weight
+    #   Height
+    #   Eye Color
+    #   Skin Color
+    #   Hair Color
     #   Level
     #   Class
     #   Race
