@@ -2,13 +2,43 @@
 
 class Character():
 
+    #based on class:
+    #
+    #   max hp
+    #   hit die
+    #   start wealth
+    #   start inventory
+    #   features
+
+    #based on level:
+    #
+    #   proficiency bonus
+
+    #based on race:
+    #
+    #   speed
+    #   traits
+
+    #need to generate:
+    #
+    #   Name
+    #   Level
+    #   Class
+    #   Race
+    #   Background
+    #   Alignment
+    #   Skills
+    #
+
     def __init__(self):
         self.Name = "undefined"
+        self.Level = 1
+        self.Class = "undefined"
         self.Class = "undefined"
         self.Stats = [0, 0, 0, 0, 0, 0]
         self.Money = [0, 0, 0, 0] #pp, gp, sp, cp
-        self.MaxHP = "0"
-        self.HP = "0"
+        self.MaxHP = 0
+        self.HP = 0
         self.Skills = ["undefined"]
 
 
