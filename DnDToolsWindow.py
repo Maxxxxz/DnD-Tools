@@ -1,13 +1,18 @@
 import tkinter as tk
 from tkinter import filedialog
 
+#create each module its own screen class; use place() and lift() methods to display
+
+
+
+
 class Application(tk.Frame):
 
     selectedFiles = []  #empty list of files
 
     def __init__(self, master=None):
         master.title("Template")                                    #change title here
-        master.geometry("300x300")                                  #change window size here
+        master.geometry("600x600")                                  #change window size here
         master.resizable(width=False, height=False)                 #resizable?
         tk.Frame.__init__(self, master, relief=tk.GROOVE)
         self.menubar = tk.Menu(self)
@@ -39,7 +44,7 @@ class Application(tk.Frame):
         # self.lb.pack(anchor=tk.CENTER)
 
     def openFiles(self):                                            #change filedialog config as needed
-        self.selectedFiles += filedialog.askopenfilenames(initialdir="Documents", title="Select Files", filetypes=(("Python Files","*.py"),("All Files","*.*")))
+        self.selectedFiles += filedialog.askopenfilenames(initialdir="Documents", title="Select Files", filetypes=[("Json Files","*.json")])
         # #updating list inside contentFrame
         # list = self.contentFrame.winfo_children()
         # if isinstance(list[0], tk.Listbox):
