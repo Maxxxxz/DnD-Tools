@@ -1,0 +1,10 @@
+{
+  "Human": {
+    "FirstName": ["firstName1", "firstName2", "firstName3"],
+    "LastName": ["lastName1", "lastName2", "lastName3"]
+  },
+  "Race1": {
+    "FirstName": ["firstName1", "firstName2", "firstName3"],
+    "LastName": ["lastName1", "lastName2", "lastName3"]
+  }
+}
