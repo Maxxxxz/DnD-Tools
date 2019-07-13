@@ -1,10 +1,14 @@
+#   Michael Cooper
+
 import tkinter as tk
 from tkinter import filedialog
 
-#create each module its own screen class; use place() and lift() methods to display
+import pages
 
+#   Create each module its own screen class; use place() and lift() methods to display
 
-
+#   Create pop out "monster manual" window for easy viewing of monster stats.
+#   Basically just big table able to search through it
 
 class Application(tk.Frame):
 
@@ -27,7 +31,8 @@ class Application(tk.Frame):
 
         master.config(menu=self.menubar)
 
-    def addMenus(self, menu=None):  #add menu items here
+        #   ADD BUTTONS TO GO TO EACH PAGE
+    def addMenus(self, menu=None):
         self.menubar.add_cascade(label="File", menu=menu)
         menu.add_command(label="Open", command=self.openFiles)
         menu.add_command(label="DEBUG|Print Open Files", command=lambda: print(self.selectedFiles))
@@ -40,6 +45,7 @@ class Application(tk.Frame):
 
     def addContent(self, contentFrame=None):                        #add content to contentFrame here
         pass
+        # pages placed here
         # self.lb = tk.Listbox(contentFrame, width=30)
         # self.lb.pack(anchor=tk.CENTER)
 
