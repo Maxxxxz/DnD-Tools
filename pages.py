@@ -13,8 +13,8 @@ class Page(tk.Frame):
 class Menu(Page):
     def __init__(self):
         Page.__init__(self)
-        label = tk.Label(self, text="Main Menu")
-        label.pack(side="top", fill="both", expand=True)
+        label = tk.Label(self, text="Dungeons and Dragons Tool Menu")
+        label.place(x=400, y=25, anchor="center")  # Place label at top of screen, then use grid for rest
 
 #   standard rolls + # of dice per each
 #   D4, D6, D8, D10, D12, D20
