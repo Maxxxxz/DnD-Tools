@@ -17,8 +17,8 @@ class Application(tk.Frame):
     selectedFiles = []  #empty list of files
 
     def __init__(self, master=None):
-        master.title("Template")                                    #change title here
-        master.geometry("600x600")                                  #change window size here
+        master.title("Dungeons And Dragons Tools")                                    #change title here
+        master.geometry("800x800")                                  #change window size here
         master.resizable(width=False, height=False)                 #resizable?
         tk.Frame.__init__(self, master, relief=tk.GROOVE)
         self.menubar = tk.Menu(self)
@@ -41,9 +41,10 @@ class Application(tk.Frame):
 
         master.config(menu=self.menubar)
 
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+
         # Binding Control + number to show different pages
-
-
 
         self.bind_all("<Control-Key-0>", self.pages[0].show)    # main menu
         self.bind_all("<Control-Key-1>", self.pages[1].show)    # RNG
