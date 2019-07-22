@@ -108,7 +108,21 @@ class NameGen(Page):
         Page.__init__(self)
         #self.master.wm_title("Dungeons and Dragons Tools - Name Generator")
         label = tk.Label(self, text="Name Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
+
+        # load list of names from json file
+
+        genLabel = tk.Label(self, text="Gen Label", width=30)
+        genLabel.place(x=400, y=100, anchor="center")
+
+        # call get random name function with params given by check boxes
+        genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
+        genButton.grid(column=1, row=2, padx=(365, 0), pady=(120, 0))
+
+        def getRandomName():
+            return "bruh"
+
+
 
 #   lock options on some info boxes
 class CharacterGen(Page):
