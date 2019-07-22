@@ -1,6 +1,7 @@
 #   Michael Cooper
 
 import tkinter as tk
+from tkinter import ttk
 from random import randrange
 
 class Page(tk.Frame):
@@ -113,11 +114,14 @@ class NameGen(Page):
         # load list of names from json file
 
         genLabel = tk.Label(self, text="Gen Label", width=30)
-        genLabel.place(x=400, y=100, anchor="center")
+        genLabel.place(x=400, y=500, anchor="center")
+
+        raceBox = ttk.Combobox(self, values=["val1", "val2", "val3", "val4"])
+        raceBox.grid(column=1, row=1, padx=(365, 0), pady=(120, 0))
 
         # call get random name function with params given by check boxes
         genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
-        genButton.grid(column=1, row=2, padx=(365, 0), pady=(120, 0))
+        genButton.grid(column=1, row=2, padx=(365, 0), pady=(10, 0))
 
         def getRandomName():
             return "bruh"
