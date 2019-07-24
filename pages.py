@@ -116,12 +116,18 @@ class NameGen(Page):
         genLabel = tk.Label(self, text="Gen Label", width=30)
         genLabel.place(x=400, y=500, anchor="center")
 
-        raceBox = ttk.Combobox(self, values=["val1", "val2", "val3", "val4"])
+        raceBox = ttk.Combobox(self, values=["val1", "val2", "val3", "val4"], state="readonly")
+        raceBox.set("Select Race")
         raceBox.grid(column=1, row=1, padx=(365, 0), pady=(120, 0))
+
+        genderTicker = ttk.Combobox(self, values=["Male", "Female", "Non-Binary"], state="readonly")
+        genderTicker.set("Select Gender")
+        genderTicker.grid(column=1, row=2, padx=(365, 0), pady=(10, 0))
+
 
         # call get random name function with params given by check boxes
         genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
-        genButton.grid(column=1, row=2, padx=(365, 0), pady=(10, 0))
+        genButton.grid(column=1, row=7, padx=(365, 0), pady=(10, 0))
 
         def getRandomName():
             return "bruh"
