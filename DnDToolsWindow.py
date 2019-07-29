@@ -60,7 +60,10 @@ class Application(tk.Frame):
         menus.append(tk.Menu(self.menubar, tearoff=0))  # create dropdown menu File
 
         self.menubar.add_cascade(label="File", underline=0, menu=menus[0])
-        menus[0].add_command(label="Open", command=self.openFiles)
+        menus[0].add_command(label="Open Character", command=self.openFiles)
+        menus[0].add_command(label="Open NPC", command=self.openFiles)
+        menus[0].add_command(label="Open Map", command=self.openFiles)
+        menus[0].add_command(label="Open Encounter", command=self.openFiles)
         menus[0].add_command(label="DEBUG|Print Open Files", command=lambda: print(self.selectedFiles))
         menus[0].add_command(label="Clear Selections", command=self.clearSelections)
         menus[0].add_separator()
@@ -97,6 +100,7 @@ class Application(tk.Frame):
         # self.lb = tk.Listbox(contentFrame, width=30)
         # self.lb.pack(anchor=tk.CENTER)
 
+    # add multiple open files to capture all file uses ex: openCharacter, openMap, openEncounter, etc...
     def openFiles(self):                                            #change filedialog config as needed
         self.selectedFiles += filedialog.askopenfilenames(initialdir="Documents", title="Select Files", filetypes=[("Json Files","*.json")])
         # #updating list inside contentFrame
