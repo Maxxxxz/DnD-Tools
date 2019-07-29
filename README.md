@@ -4,11 +4,28 @@ This program will generate a json file containing the information for a Dungeons
 The file can be loaded into the editor
 
 # Todo
-  * Everything
-  * Create 'Character' class
-    * Implement functions that allow class to be simply written to json format and read from
-    * Gather all required elements for a Character to have
-  * Basic UI elements that allow generation of the class
-  * Write/Read to/from json
-  * Reasonable generators with options (i.e. reroll 1s, no random class/name)
-  * Coherent story generator
+  * Pages
+    * ~~Dice Roll Page~~
+    * Name Generator
+        * Options for race and gender
+        * Get names for *all* vanilla races
+        * Implement easy to add races/names
+    * Character Generator
+        * Read/write to json
+        * Customizable options (reroll 1's, disable randomization of certain element)
+    * NPC Generator
+        * Read/write to json (similar to characters)
+        * Customizable options (reroll 1's, disable randomization of certain element)
+        * Occupation
+            * Relevant inventory (such as stock for a salesman/shopkeep)
+    * Story Generator
+        * Coherent
+        * Campaign *or* Player story
+    * Settlement Generator
+        * Some form of city generation that is not chaotic
+        * Size options
+        * Templates for cities (mark building/district positions)
+    * Encounter Generator
+        * Read/write to json (allow user to save encounters)
+        * Loot
+  * Improve UI
