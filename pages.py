@@ -118,16 +118,16 @@ class NameGen(Page):
 
         raceBox = ttk.Combobox(self, values=["val1", "val2", "val3", "val4"], state="readonly")
         raceBox.set("Select Race")
-        raceBox.grid(column=1, row=1, padx=(365, 0), pady=(120, 0))
+        raceBox.grid(column=1, row=1, padx=(325, 0), pady=(120, 0))
 
         genderTicker = ttk.Combobox(self, values=["Male", "Female", "Non-Binary"], state="readonly")
         genderTicker.set("Select Gender")
-        genderTicker.grid(column=1, row=2, padx=(365, 0), pady=(10, 0))
+        genderTicker.grid(column=1, row=2, padx=(325, 0), pady=(10, 0))
 
 
         # call get random name function with params given by check boxes
         genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
-        genButton.grid(column=1, row=7, padx=(365, 0), pady=(10, 0))
+        genButton.grid(column=1, row=7, padx=(325, 0), pady=(10, 0))
 
         def getRandomName():
             return "bruh"
@@ -139,28 +139,28 @@ class CharacterGen(Page):
     def __init__(self):
         Page.__init__(self)
         label = tk.Label(self, text="Character Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
 
 #   lock options on some info boxes
 class NPCGen(Page):
     def __init__(self):
         Page.__init__(self)
         label = tk.Label(self, text="NPC Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
 
 #   character/campaign story gen options
 class StoryGen(Page):
     def __init__(self):
         Page.__init__(self)
         label = tk.Label(self, text="Story Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
 
 #   size/vendor options; would LOVE to create images for them perhaps using PIL?
 class SettlementGen(Page):
     def __init__(self):
         Page.__init__(self)
         label = tk.Label(self, text="Settlement Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
 
 #   base on number of players and the average level of each.
 #   make note of custom encounters based on environment will be much better
@@ -168,4 +168,4 @@ class EncounterGen(Page):
     def __init__(self):
         Page.__init__(self)
         label = tk.Label(self, text="Encounter Generator")
-        label.pack(side="top", fill="both", expand=True)
+        label.place(x=400, y=25, anchor="center")
