@@ -3,6 +3,8 @@
 import tkinter as tk
 from tkinter import ttk
 from random import randrange
+from Generators import *
+
 
 class Page(tk.Frame):
     def __init__(self):
@@ -128,10 +130,6 @@ class NameGen(Page):
         # call get random name function with params given by check boxes
         genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
         genButton.grid(column=1, row=7, padx=(325, 0), pady=(10, 0))
-
-        def getRandomName():
-            return "bruh"
-
 
 
 #   lock options on some info boxes
