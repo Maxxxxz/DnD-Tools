@@ -6,6 +6,7 @@ from tkinter.ttk import *
 import sys
 import webbrowser
 import requests
+import json
 
 import pages
 
@@ -57,7 +58,20 @@ class Application(tk.Frame):
         self.bind_all("<Control-Key-6>", self.pages[6].show)    # Settlement Gen
         self.bind_all("<Control-Key-7>", self.pages[7].show)    # Encounter Gen
 
-        #versionInfo = requests.get()
+        self.versioninfo = self.getVersionInfo()
+
+        # print("Version: " + self.versioninfo["version"])
+        # changestr = "Changes: "
+        #
+        # for note in self.versioninfo["changes"]:
+        #     changestr += note + " "
+        # print(changestr)
+
+        #self.recentversion = requests.get()
+
+    def getVersionInfo(self):
+        with open(".//json//version.json") as j:
+            return json.load(j)
 
     def addMenus(self, menus=None):
 
