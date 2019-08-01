@@ -3,6 +3,10 @@
 This program will generate a json file containing the information for a Dungeons and Dragons character/NPC.
 The file can be loaded into the editor
 
+# Features
+
+  * Random Roll Generator 
+
 # Todo
   * Pages
     * ~~Dice Roll Page~~
@@ -29,3 +33,4 @@ The file can be loaded into the editor
         * Read/write to json (allow user to save encounters)
         * Loot
   * Improve UI
+  * Add features as they are completed

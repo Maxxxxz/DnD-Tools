@@ -1,7 +1,7 @@
 #   Michael Cooper
 
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 from tkinter.ttk import *
 import sys
 import webbrowser
@@ -106,7 +106,6 @@ class Application(tk.Frame):
         menus[2].add_command(label="Support Me :)", command=lambda: self.supportmeButton())
         menus[2].add_command(label="About", command=lambda: self.aboutButton())
 
-
     def clearSelections(self):
         self.selectedFiles.clear()
 
@@ -117,6 +116,11 @@ class Application(tk.Frame):
         webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
 
     def aboutButton(self):
+        vinfo = "Newest Version: " + "\n"# + self.recentversion["version"]
+        vinfo += "Current Version: " + self.versioninfo["version"] + "\n"
+        ch = '\n'.join(self.versioninfo["changes"])
+        vinfo += ch
+        messagebox.showinfo("About", vinfo)
         pass
         # get current version from local json file; read most up to date version from github; display latest changes
 
