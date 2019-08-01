@@ -4,6 +4,8 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter.ttk import *
 import sys
+import webbrowser
+import requests
 
 import pages
 
@@ -55,6 +57,8 @@ class Application(tk.Frame):
         self.bind_all("<Control-Key-6>", self.pages[6].show)    # Settlement Gen
         self.bind_all("<Control-Key-7>", self.pages[7].show)    # Encounter Gen
 
+        #versionInfo = requests.get()
+
     def addMenus(self, menus=None):
 
         menus.append(tk.Menu(self.menubar, tearoff=0))  # create dropdown menu File
@@ -81,8 +85,29 @@ class Application(tk.Frame):
         menus[1].add_command(label="Settlement Generator", command=self.pages[6].lift, accelerator="Control+6")
         menus[1].add_command(label="Encounter Generator", command=self.pages[7].lift, accelerator="Control+7")
 
+        menus.append(tk.Menu(self.menubar, tearoff=0))  # create dropdown menu Help
+        self.menubar.add_cascade(label="Help", underline=0, menu=menus[2])
+        menus[2].add_command(label="Github Page", command=lambda: self.githubButton())
+        menus[2].add_command(label="Github Page", command=lambda: self.helpButton())
+        menus[2].add_command(label="Support Me :)", command=lambda: self.supportmeButton())
+        menus[2].add_command(label="About", command=lambda: self.aboutButton())
+
+
     def clearSelections(self):
         self.selectedFiles.clear()
+
+    def supportmeButton(self):
+        webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
+
+    def helpButton(self):
+        webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
+
+    def aboutButton(self):
+        pass
+        # get current version from local json file; read most up to date version from github; display latest changes
+
+    def githubButton(self):
+        webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
 
     def addContent(self, contentFrame=None):                        #add content to contentFrame here
         self.pages.append(pages.Menu())
@@ -103,10 +128,6 @@ class Application(tk.Frame):
     # add multiple open files to capture all file uses ex: openCharacter, openMap, openEncounter, etc...
     def openFiles(self):                                            #change filedialog config as needed
         self.selectedFiles += filedialog.askopenfilenames(initialdir="Documents", title="Select Files", filetypes=[("Json Files","*.json")])
-        # #updating list inside contentFrame
-        # list = self.contentFrame.winfo_children()
-        # if isinstance(list[0], tk.Listbox):
-        #     list[0].insert(tk.END, self.selectedFiles)
 
 root = tk.Tk()
 application = Application(root)
