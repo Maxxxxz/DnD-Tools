@@ -8,5 +8,6 @@ def genStory():
     #to a string. rng for extra info such as travel/tragedies
 
 def genName():
+    return "temp"
     pass
     #read json file and load names; get random based on preferences

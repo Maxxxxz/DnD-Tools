@@ -128,7 +128,7 @@ class NameGen(Page):
 
 
         # call get random name function with params given by check boxes
-        genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=getRandomName()))
+        genButton = tk.Button(self, width=8, height=1, text="Generate", command=lambda: genLabel.config(text=genName()))
         genButton.grid(column=1, row=7, padx=(325, 0), pady=(10, 0))
 
 
