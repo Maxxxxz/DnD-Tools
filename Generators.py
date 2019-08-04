@@ -11,3 +11,6 @@ def genName():
     return "temp"
     pass
     #read json file and load names; get random based on preferences
+
+def genCharacter():
+    pass
