@@ -111,9 +111,11 @@ class Application(tk.Frame):
 
     def supportmeButton(self):
         webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
+        #change to donate page
 
     def helpButton(self):
         webbrowser.open("https://github.com/Maxxxxz/DnD-Tools")
+        #change to wiki once its made
 
     def aboutButton(self):
         vinfo = "Newest Version: " + "\n"# + self.recentversion["version"]
