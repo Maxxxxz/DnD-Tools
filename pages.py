@@ -1,7 +1,7 @@
 #   Michael Cooper
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, PhotoImage
 from random import randrange
 from Generators import *
 
@@ -159,6 +159,14 @@ class SettlementGen(Page):
         Page.__init__(self)
         label = tk.Label(self, text="Settlement Generator")
         label.place(x=400, y=25, anchor="center")
+
+        # photo displaying newest city generated?
+        photo = """"""
+        photoBox = PhotoImage(data=photo)
+        photolabel = tk.Label(image=photoBox)
+        photolabel.place(x=5, y=50)
+
+
 
 #   base on number of players and the average level of each.
 #   make note of custom encounters based on environment will be much better
